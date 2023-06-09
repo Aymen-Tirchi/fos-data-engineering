@@ -1,0 +1,4 @@
+__pycache__
+raw_data_*
+temperature_map.html
+transformed_data.csv
