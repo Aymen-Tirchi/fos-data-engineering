@@ -7,7 +7,7 @@ This project is an ETL (Extract, Transform, Load) pipeline that retrieves curren
 - Retrieves current weather data using the Open-Meteo API.
 - Uses geocoding to obtain latitude and longitude coordinates for cities using the Nominatim API.
 - Supports custom list of cities stored in a JSON file.
-- Saves the weather data to multiple output files:
+- Saves the weather data to multiple output files (root folder):
   - raw_data_.json: Contains the raw weather data for all cities.
   - transformed_data.csv: Contains the transformed weather data in CSV format.
   - temperature_map.html: Displays an interactive map with temperature data.
