@@ -1,18 +1,19 @@
 import json
 import time
 from geopy.geocoders import Nominatim
+import os
 
 import requests
-
 
 import os
 
 def get_list_of_cities():
-    
-    with open('cities.json', 'r') as file:
+    script_path = os.path.dirname(os.path.abspath(__file__))
+    cities_json_path = os.path.join(script_path, 'cities.json')
+    with open(cities_json_path, 'r') as file:
         data = json.load(file)
-    
     return data
+
 
     # read the file cities.json and returns its content.
     # Example: this function should return ["Algiers", "Batna", "Tamanrasset"]

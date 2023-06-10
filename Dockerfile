@@ -4,13 +4,9 @@ RUN apk add --no-cache dcron gcc gfortran musl-dev lapack-dev
 
 WORKDIR /app
 
-COPY etl.py .
-COPY extract.py .
-COPY map.py .
-COPY transform.py .
-COPY requirements.txt .
-COPY cities.json .
-COPY .hintrc .
+COPY cities.json /app
+
+COPY . .
 
 RUN apk add --no-cache --virtual .build-deps build-base && \
     apk add --no-cache lapack && \
